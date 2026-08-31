@@ -38,6 +38,7 @@ pub fn created(
     rate_per_second: i128,
     start_time: u64,
     end_time: u64,
+    storage_version: u32,
 ) {
     assert_non_negative_amount(env, rate_per_second);
 
@@ -50,6 +51,7 @@ pub fn created(
             rate_per_second,
             start_time,
             end_time,
+            storage_version,
         ),
     );
 }
